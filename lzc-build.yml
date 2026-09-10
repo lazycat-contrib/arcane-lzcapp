@@ -1,0 +1,9 @@
+manifest: ./lzc-manifest.yml
+pkgout: ./dist
+icon: ./icon.png
+compose_override:
+  services:
+    arcane:
+      cgroup: host
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock

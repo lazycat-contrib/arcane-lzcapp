@@ -1,0 +1,15 @@
+package: community.lazycat.app.arcane
+version: 2.11.0-next.30
+name: Arcane
+description: Modern Docker Management, Designed for Everyone
+homepage: https://github.com/getarcaneapp/arcane
+author: getarcaneapp
+license: BSD-3-Clause
+min_os_version: 1.5.0
+locales:
+  zh:
+    name: Arcane
+    description: 为每个人打造的现代 Docker 管理工具
+  en:
+    name: Arcane
+    description: Modern Docker Management, Designed for Everyone

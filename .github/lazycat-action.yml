@@ -1,0 +1,35 @@
+version: 1
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/application.lpk
+  target_arch: amd64
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: arcane
+build:
+  toolchains: []
+  run_buildscript: false
+images:
+  - id: arcane
+    target: service
+    service: arcane
+    source: ghcr.io/getarcaneapp/manager
+    channel: custom
+    sort: semver
+    tag_regex: '^v[0-9]+\.[0-9]+\.[0-9]+-next\.[0-9]+$'
+    delivery:
+      mode: mirror
+      require_digest_match: true
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Arcane
+    summary: Modern Docker Management, Designed for Everyone
