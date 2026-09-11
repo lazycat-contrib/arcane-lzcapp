@@ -7,8 +7,8 @@ application:
       backend: http://arcane:3552/
 services:
   arcane:
-    # upstream: ghcr.io/getarcaneapp/manager:v2.11.0-next.30
-    image: ghcr.1ms.run/getarcaneapp/manager:v2.11.0-next.30
+    # upstream: ghcr.io/getarcaneapp/manager:v2.11.0-next.36
+    image: ghcr.1ms.run/getarcaneapp/manager:v2.11.0-next.36
     environment:
       - ENCRYPTION_KEY={{ stable_secret "arcane_encryption_key" | substr 0 32 }}
       - TZ=UTC
