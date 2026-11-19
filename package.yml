@@ -1,5 +1,5 @@
 package: community.lazycat.app.arcane
-version: 3.1.0-next.23
+version: 3.1.1-next.13
 name: Arcane
 description: Modern Docker Management, Designed for Everyone
 homepage: https://github.com/getarcaneapp/arcane
